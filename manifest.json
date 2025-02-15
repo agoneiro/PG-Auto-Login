@@ -1,0 +1,21 @@
+{
+    "name" : "PG Auto Login",
+    "description" : "Allows you to login automatically on PG",
+    "version" : "1.0",
+    "manifest_version" : 3,
+    "permissions" : ["storage", "scripting", "activeTab"],
+    "host_permissions" : ["https://logowanie.pg.edu.pl/*"],
+    "action" : {
+        "default_popup" : "popup.html",
+        "default_icon" : "icon.png"
+    },
+    "icons" : {
+        "128" : "icon.png"
+    },
+    "content_scripts" : [
+        {
+            "matches" : ["https://logowanie.pg.edu.pl/*"],
+            "js" : ["content.js"]
+        }
+    ]
+}
